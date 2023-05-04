@@ -17,7 +17,6 @@ const Header = () => {
   };
 
   return (
-   
     <Navbar bg="light" expand="lg" className="navbar-color shadow-md">
       <Container>
         <Navbar.Brand href="#">
@@ -35,11 +34,10 @@ const Header = () => {
             <Link className="activeNav nav" activeClassName="activeNav" to="/">
               Home
             </Link>
-           
+
             <Link activeClassName="activeNav" to="/blog">
               Blog
             </Link>
-            
           </Nav>
           <Nav>
             {user ? (
