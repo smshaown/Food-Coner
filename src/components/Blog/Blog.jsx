@@ -20,7 +20,7 @@ const Blog = () => {
         This is Blog Section
       </h1>
       <div ref={ref}>
-        <h3>Differences between uncontrolled and controlled components?</h3>
+        <h3>1. Differences between uncontrolled and controlled components?</h3>
         <p>
           In React, uncontrolled components and controlled components refer to
           two different ways of handling form elements and user input:
@@ -41,7 +41,7 @@ const Blog = () => {
       </div>
 
       <div>
-        <h2>How to validate React props using PropTypes?</h2>
+        <h2>2. How to validate React props using PropTypes?</h2>
         <p>
           here's an example of how to use PropTypes to validate the props passed
           to an Article component in React:
@@ -66,7 +66,7 @@ const Blog = () => {
       </div>
 
       <div>
-        <h2>Difference between nodejs and express js.</h2>
+        <h2>3. Difference between nodejs and express js.</h2>
 
         <p>
           Node.js is a runtime environment for executing JavaScript code outside
@@ -82,7 +82,7 @@ const Blog = () => {
       </div>
 
       <div>
-        <h2>What is a custom hook, and why will you create a custom hook?</h2>
+        <h2>4. What is a custom hook, and why will you create a custom hook?</h2>
         <p>
           A custom hook in React is a function that encapsulates reusable logic
           that can be shared across multiple components. Custom hooks are a way

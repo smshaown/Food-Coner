@@ -9,57 +9,59 @@ import { ToastContainer } from "react-bootstrap";
 const Login = () => {
   const [error, setError] = useState("");
 
-
-  const {singIn, googleSing, gitHub} = useContext(AuthContext);
+  const { singIn, googleSing, gitHub } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location)
+  console.log(location);
 
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from?.pathname || "/";
 
-  const handleLogin = event => {
-      event.preventDefault();
+  const handleLogin = (event) => {
+    event.preventDefault();
 
-      const form = event.target;
-      const email = form.email.value;
-      const password = form.password.value;
-      console.log(email, password)
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
 
-      singIn(email, password)
-      .then(result => {
-          const loggedUser = result.user;
-          console.log(loggedUser)
-          // form.reset()
-          navigate(from, {replace: true})
+    singIn(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        // form.reset()
+        navigate(from, { replace: true });
       })
-      .catch(error => {
-          console.log(error)
-          if (error.code === "auth/wrong-password") {
+      .catch((error) => {
+        console.log(error);
+        if (error.code === "auth/wrong-password") {
           const errorMessage = "Invalid email or password. Please try again.";
           setError(errorMessage);
           toast.error(errorMessage);
-         }
-      })
-
-  }
+        }
+      });
+  };
 
   const handleGoogleSingIn = async () => {
-    try{
-      
-        await googleSing();
-        navigate(from, {replace: true})
-    }catch(error){
-        console.log(error)
+    try {
+      await googleSing();
+      navigate(from, { replace: true });
+    } catch (error) {
+      console.log(error);
     }
-}
-  const handleGitSingIn = async () => {
-    try{
-        await gitHub();
-        navigate(from, {replace: true})
-    }catch(error){
-        console.log(error)
-    }
-}
+  };
+  
+
+  const handleGitSingIn = () => {
+    gitHub()
+    .then(result => {
+      const user = result.user;
+      navigate(from, { replace: true });      
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
 
   return (
     <div className="login-container py-5">
