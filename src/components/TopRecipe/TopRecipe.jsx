@@ -4,23 +4,25 @@ import { FcLike } from "react-icons/fc";
 import { GrFavorite } from "react-icons/gr";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './TolTip.css'
 
 const TopRecipe = ({ recipeCard }) => {
-  
+  const {recipeName, cooking_method, ingredients, rating} = recipeCard;
+
   const [clicked, setClicked] = useState(false)
 
 
-  const {recipeName, cooking_method} = recipeCard;
+ 
+  console.log(ingredients)
 
   const handleClick = () => {
-    setClicked(true); 
-    
+    setClicked(true);     
     const successMessage = "Disablee the code";
     toast.success(successMessage);
   };
 
 
-  console.log(recipeCard);
+  // console.log(recipeCard);
   return (
     <div>
       <CardGroup>
@@ -31,12 +33,26 @@ const TopRecipe = ({ recipeCard }) => {
             <Card.Text>
               {cooking_method}
             </Card.Text>
+            <div>
+              <h3>Ingredients</h3>
+              <h4>rating: {recipeCard.rating.number} </h4>
+
+                <span className="mt-3 li">
+                {
+                  ingredients.map((items, index) => <ol>
+                    <li>{items}</li>
+                  </ol>)
+                }
+                </span>
+                
+            </div>
           </Card.Body>
-          <Card.Footer>
-            <button className="btn btn-info" onClick={handleClick} disabled={clicked}>{clicked ? <FcLike /> : <GrFavorite /> } Favarit  </button>
-          </Card.Footer>
+          <div>
+            <button className="btn btn-info mb-2 ml-2" onClick={handleClick} disabled={clicked}>{clicked ? <FcLike /> : <GrFavorite /> } Favourite  </button>
+          </div>
         </Card>
       </CardGroup>
+      <ToastContainer />
     </div>
   );
 };
