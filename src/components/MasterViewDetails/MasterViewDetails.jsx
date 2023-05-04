@@ -52,16 +52,16 @@ const MasterViewDetails = () => {
             <div>
               <h4>{viewDetails?.year_of_experience}</h4>
               <h6 className="mt-3 mb-3">
-                <FaRegThumbsUp />: {viewDetails?.likes}
+                Likes: {viewDetails?.likes}
               </h6>
               <h6>
-                <FaElementor />: {viewDetails?.number_of_recipes}
+                Number of Recipes : {viewDetails?.number_of_recipes}
               </h6>
               <div></div>
             </div>
           </div>
 
-          <h2>Recipes</h2>
+          <h2 className="mt-5 mb-5 text-center"> Top Recipes Recipes</h2>
          
           <Row sm={1} md={3}>
           {
