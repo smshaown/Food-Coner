@@ -2,9 +2,9 @@ import React, { useContext, useState } from "react";
 import "./Login.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-bootstrap";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer } from "react-bootstrap";
 
 const Login = () => {
   const [error, setError] = useState("");
@@ -30,6 +30,9 @@ const Login = () => {
         console.log(loggedUser);
         // form.reset()
         navigate(from, { replace: true });
+
+        const successMessage = "You have successfully logged in!";
+        toast.success(successMessage);
       })
       .catch((error) => {
         console.log(error);
@@ -40,6 +43,7 @@ const Login = () => {
         }
       });
   };
+
 
   const handleGoogleSingIn = async () => {
     try {
