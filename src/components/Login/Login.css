@@ -1,0 +1,17 @@
+.login-container{
+    background-image: url('https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-form {
+    width: 360px; 
+}
+.login-account{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: black;
+}
+.login-account:hover{
+    color: black;
+}

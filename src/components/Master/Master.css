@@ -1,0 +1,18 @@
+.top-container{
+    background-image: url('https://qichen-react.vercel.app/assets/images/bg/dot-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 500px; */
+    overflow: hidden;
+    background-color: #FDF1ED;
+}
+.masterText{
+    color: #0E1317;
+    font-size: 48px;
+    font-family: "Forum", cursive;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+

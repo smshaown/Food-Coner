@@ -1,0 +1,44 @@
+.about-img{
+    height: 540px;
+    width: 100%;
+    padding: 20px;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* .service-banner{    
+    background-color: rgba(223, 63, 0, 0.07);
+} */
+
+
+.service-banner img{
+    position: relative;
+    opacity: .3;
+    height: 350px;
+    background-image: cover;    
+    object-fit: cover;
+    background-color: rgba(223, 63, 0, 0.07);
+}
+
+.buttonInfo{
+    background-color: #DF3F00;
+    padding: 10px 25px;
+    border: none;
+    transition: all 0.3s ease-out 0s;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.buttonInfo a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttonInfo a:hover{
+    text-decoration: underline;
+}

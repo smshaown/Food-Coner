@@ -1,0 +1,33 @@
+.banner-text h1{
+    font-size: 100px;
+    font-family: 'Forum', cursive;
+}
+
+.banner-text p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.top-banner{
+   background-color: #FDF1ED;
+}
+
+/* .banner-img{
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    height: 460px;
+    background-attachment: fixed;
+    margin-left: 20px;
+} */
+
+.downArrow{
+    margin-right: 20px;
+   
+}
+
+/* media query for screens 768px and below */
+@media only screen and (max-width: 768px) {
+    .banner-text h1 {
+      font-size: 80px;
+    }
+  }

@@ -1,0 +1,40 @@
+.navbar-color{
+    background-color: #FDF1ED !important;
+}
+.logo-img{
+    background-color: #DF3F00;
+    /* padding: 10px 25px; */
+    width: 40px;
+    height: 80px;
+    
+}
+
+.logoText{
+    font-family: 'Forum', cursive;
+    margin-left: 5px;
+    color: #000;
+}
+
+
+nav a{
+    font-size: 20px;
+    color: rgb(10, 0, 0);
+    font-weight: 600;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+.button-info{
+    background-color: #DF3F00;
+    padding: 10px 25px;
+    border: none;
+    transition: all 0.3s ease-out 0s;
+}
+
+.button-info:hover{
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    
+    transform: 1s;
+}
