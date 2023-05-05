@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 // import logo from "../../assets/logo-white.png";
 import "./Header.css";
 import { AuthContext } from "../../provider/AuthProvider";
@@ -30,15 +31,28 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="mx-auto">
-            <Link className="activeNav nav" activeClassName="activeNav" to="/">
-              Home
-            </Link>
+        <Nav className="mx-auto">
+          <NavLink  to="/"
+                    className={({ isActive, isPending }) =>
+                      isActive
+                        ? "activeNav"
+                        : isPending
+                        ? "pending"
+                        : ""
+                    } activeClassName="activeNav">
+            Home
+          </NavLink>
 
-            <Link activeClassName="activeNav" to="/blog">
-              Blog
-            </Link>
-          </Nav>
+          <NavLink to="/blog" className={({ isActive, isPending }) =>
+                      isActive
+                        ? "activeNav"
+                        : isPending
+                        ? "pending"
+                        : ""
+                    } activeClassName="activeNav" >
+            Blog
+          </NavLink>
+        </Nav>
           <Nav>
             {user ? (
               <img

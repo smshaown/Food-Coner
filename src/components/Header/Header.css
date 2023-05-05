@@ -38,6 +38,7 @@ nav a{
     transform: 1s;
 } */
 
-.active {
-    color: red;
+.activeNav {    
+  color: red !important;
+    font-weight: bold;
   }
