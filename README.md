@@ -2,19 +2,20 @@
 
 ## Live Link
 
-Hosted in Netlify -> [Food Coner](https://cooking-projext.web.app/)
+Hosted in Firebase -> [Food Coner](https://cooking-projext.web.app/)
 
 # Home-Page:
-
+* Nav bar 
+* Lazy Load added img
 * Banner
 * Food Category List
 * Food list
-
+* Food Menu
+* Customer Reviw 
+* Footer
 # Statistics-Page:
 
 * Assignment Analytics
-
-# Applied-Jobs-Page:
 
 
 # Blog-Page:
@@ -22,7 +23,7 @@ Hosted in Netlify -> [Food Coner](https://cooking-projext.web.app/)
 * Frequently Asked Questions
 
 # View-Details-Button:
-
+* Pdf 
 * Food Man Details Information
 
 # Apply-Button:
@@ -38,5 +39,4 @@ Tailwind css -> [Link](https://tailwindcss.com/)
 Icon -> [Hero Icon](https://heroicons.com/)
 
 Accordion -> [React Flowbite](https://flowbite-react.com/accordion)
-# newsite
 

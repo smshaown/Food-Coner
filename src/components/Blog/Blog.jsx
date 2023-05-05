@@ -20,7 +20,8 @@ const Blog = () => {
         This is Blog Section
       </h1>
       <div ref={ref}>
-        <h3>1. Differences between uncontrolled and controlled components?</h3>
+       <div>
+       <h3>1. Differences between uncontrolled and controlled components?</h3>
         <p>
           In React, uncontrolled components and controlled components refer to
           two different ways of handling form elements and user input:
@@ -38,9 +39,9 @@ const Blog = () => {
           need to validate input, conditionally disable or enable fields, or
           perform other complex tasks.
         </p>
-      </div>
+       </div>
 
-      <div>
+        <div>
         <h2>2. How to validate React props using PropTypes?</h2>
         <p>
           here's an example of how to use PropTypes to validate the props passed
@@ -95,6 +96,9 @@ const Blog = () => {
           places, making your code more modular and easier to maintain.
         </p>
       </div>
+      </div>
+
+      
     </Container>
   );
 };
