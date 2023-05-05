@@ -37,3 +37,7 @@ nav a{
     font-weight: bold;    
     transform: 1s;
 } */
+
+.active {
+    color: red;
+  }
