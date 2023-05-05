@@ -28,11 +28,12 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        // form.reset()
+       
         navigate(from, { replace: true });
 
         const successMessage = "You have successfully logged in!";
         toast.success(successMessage);
+         form.reset()
       })
       .catch((error) => {
         console.log(error);
@@ -59,7 +60,8 @@ const Login = () => {
     gitHub()
     .then(result => {
       const user = result.user;
-      navigate(from, { replace: true });      
+      navigate(from, { replace: true });   
+      console.log(user)   
     })
     .catch(error => {
       console.log(error)
@@ -116,7 +118,7 @@ const Login = () => {
           </div>
 
           <Link className="login-account" to="/register">
-            Create new Account. Register
+            Create new Account. <span className="text-info fw-bold">Register</span>
           </Link>
         </div>
 

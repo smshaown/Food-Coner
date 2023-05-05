@@ -31,10 +31,9 @@ nav a{
     transition: all 0.3s ease-out 0s;
 }
 
-.button-info:hover{
+/* .button-info:hover{
     background-color: #000;
     color: white;
-    font-weight: bold;
-    
+    font-weight: bold;    
     transform: 1s;
-}
+} */

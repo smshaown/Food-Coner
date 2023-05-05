@@ -26,7 +26,7 @@ const Header = () => {
             src={logo}
             alt=""
           />
-          <span className="logoText">SM FOODCONER</span>
+         <Link to="/"><span className="logoText">SM FOODCONER</span></Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -54,7 +54,7 @@ const Header = () => {
                 alt={user?.displayName}
               />
             ) : (
-              <Button className="ml-3 button-info">
+              <Button className="ml-3 btn btn-danger">
                 <Link to="/login">Log In</Link>
               </Button>
             )}

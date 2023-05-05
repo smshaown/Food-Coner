@@ -91,13 +91,13 @@ const Register = () => {
 
                     
 
-                    <label htmlFor="confirm">photo url </label>
-                    <input className="form-control" type="text" name="photo" id="" placeholder="Type your Confirm password" required /> <br />
+                    <label htmlFor="confirm">Photo URL </label>
+                    <input className="form-control" type="text" name="photo" id="" placeholder="Type your Photo link" required /> <br />
 
                     <input className="form-control bg-info fw-bold" type="submit" value="Register" />
                 </form>
                
-                <Link className="login-account mt-3" to="/login">I have an account, Login</Link>
+                <Link className="login-account mt-3" to="/login">I have an account, <span className='text-info fw-bold'>Login</span> </Link>
             </div>
 
             <p className="text-danger text-center mt-4">{error}</p>
