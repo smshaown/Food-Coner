@@ -46,7 +46,7 @@ const MasterViewDetails = () => {
               alt=""
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 grid mt-5">
             <h1 className="mt-3">{viewDetails?.name}</h1>
             <p className="mt-4">{viewDetails?.chefDescription}</p>
             <div>
@@ -63,7 +63,7 @@ const MasterViewDetails = () => {
 
           <h2 className="mt-5 mb-5 text-center"> Top Recipes Recipes</h2>
          
-          <Row sm={1} md={3}>
+          <Row sm={1} xs={12} md={3} className="mx-auto">
           {
             recipe?.map(recipeCard => <TopRecipe key={recipeCard.id} recipeCard={recipeCard}></TopRecipe>)
           }

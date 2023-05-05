@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardGroup, Col, Row } from "react-bootstrap";
+import { Button, Card, CardGroup, Col, Row } from "react-bootstrap";
 import { FcLike } from "react-icons/fc";
 import { GrFavorite } from "react-icons/gr";
 import { ToastContainer, toast } from "react-toastify";
@@ -15,44 +15,33 @@ const TopRecipe = ({ recipeCard }) => {
 
   const handleClick = () => {
     setClicked(true);
-    const successMessage = "Disablee the code";
+    const successMessage = "success your Favourite Item";
     toast.success(successMessage);
   };
 
-  // console.log(recipeCard);
+  // console.log(index);
   return (
     <div>
      
 
-          <div className="card" style={{width: "18rem"}}>
-            <img src={recipeCard.recipeItemsImg} style={{width: "100%", height: "300px"}} className="card-img-top" alt="..." />
-            <p></p>
-            <div className="card-body">
-              <h3 className="">{recipeName}</h3>
-              <h4>Rating: {recipeCard.rating.number} </h4>
-                <p>{cooking_method}</p>
-              <h5 className="card-title">Ingredients:</h5>
-              
-             
-              <span classNameName="mt-3 li">
-                    {ingredients.map((items, index) => (
-                      <ol>
-                        <li>{items}</li>
-                      </ol>
-                    ))}
-                  </span>
-
-
-              <button
-                  className="btn btn-warning mb-2 ml-2"
-                  onClick={handleClick}
-                  disabled={clicked}
-                >
-                  {clicked ? <FcLike /> : <GrFavorite />} Favourite{" "}
-                </button>
-            </div>
-          </div>
-
+     <Card  style={{ width: '22rem' }}>
+        <Card.Img variant="top" src={recipeCard.recipeItemsImg} className="img-fluid" style={{ width: '100%', height: '300px' }} />
+        <Card.Body>
+          <hr />
+          <Card.Title>{recipeName}</Card.Title>
+          <Card.Subtitle className="mb-2">Rating: {recipeCard.rating.number}</Card.Subtitle>
+          <Card.Text>{cooking_method}</Card.Text>
+          <Card.Title>Ingredients:</Card.Title>
+          <ul className="mt-3 li">
+            {ingredients.map(items => (
+              <li>{items}</li>
+            ))}
+          </ul>
+          <Button variant="warning" className="mb-2 ml-2" onClick={handleClick} disabled={clicked}>
+            {clicked ? <FcLike /> : <GrFavorite />} Favourite
+          </Button>
+        </Card.Body>
+      </Card>
 
 
       <ToastContainer />
