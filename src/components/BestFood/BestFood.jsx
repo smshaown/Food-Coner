@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import FoodCard from '../FoodCard/FoodCard';
-import './BestFood.css'
+import './BestFood.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 
 const BestFood = () => {
 
@@ -25,7 +28,14 @@ const BestFood = () => {
             <Container>
                <Row xs={1} md={2} className="g-5 mr-3">
                   <Col>
-                     <img className="img-fluid rounded" src="https://i.ibb.co/8cZGnfb/menu-single-1.jpg" alt="" />
+                     {/* <img className="img-fluid rounded" src="https://i.ibb.co/8cZGnfb/menu-single-1.jpg" alt="" /> */}
+                     <LazyLoadImage
+                        src="https://i.ibb.co/8cZGnfb/menu-single-1.jpg"
+                        effect="blur"
+                        className="img-fluid w-100"
+                        alt="Image Alt"
+                        variant="top"
+                    />
                   </Col>
                   <Col>
                     {

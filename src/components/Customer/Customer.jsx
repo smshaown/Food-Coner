@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "./Customer.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Customer = () => {
   return (
@@ -18,6 +20,7 @@ const Customer = () => {
               style={{ height: "200px" }}
               src="https://images.pexels.com/photos/14876457/pexels-photo-14876457.jpeg?auto=compress&cs=tinysrgb&w=600"
             />
+            
             <Card.Body>
               <img
                 style={{
