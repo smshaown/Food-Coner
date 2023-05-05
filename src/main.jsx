@@ -28,7 +28,8 @@ import NotFound from './components/NotFound/NotFound.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main></Main>, 
+    element: <Main></Main>,
+    errorElement: <NotFound />,
     children: [
       {
         path: '/',
@@ -51,11 +52,7 @@ const router = createBrowserRouter([
         path: 'masterViewDetails/:id',
         element: <PrivateRoute><MasterViewDetails></MasterViewDetails></PrivateRoute>,
         loader: ({params}) => fetch(`https://client-side-smshaown.vercel.app/chefDetails/${params.id}`)
-      },
-      {
-        path: '*',
-        element: <NotFound />
-      }
+      }  
       
     ]
   },
