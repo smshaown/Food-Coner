@@ -28,8 +28,11 @@ const TopRecipe = ({ recipeCard }) => {
             <img src={recipeCard.recipeItemsImg} style={{width: "100%", height: "300px"}} className="card-img-top" alt="..." />
             <p></p>
             <div className="card-body">
-              <h3 className="card-title">Ingredients</h3>
+              <h3 className="">{recipeName}</h3>
               <h4>Rating: {recipeCard.rating.number} </h4>
+                <p>{cooking_method}</p>
+              <h5 className="card-title">Ingredients:</h5>
+              
              
               <span classNameName="mt-3 li">
                     {ingredients.map((items, index) => (

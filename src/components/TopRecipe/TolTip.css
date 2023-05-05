@@ -1,3 +1,5 @@
 span li {
     list-style: none;
+    font-size: 16px;
+    line-height: 15px;
 }
